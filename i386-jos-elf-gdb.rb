@@ -13,6 +13,8 @@ class I386JosElfGdb < Formula
       system '../configure', '--target=i386-jos-elf', "--prefix=#{prefix}", '--disable-werror'
       system 'make'
       system 'make install'
+      FileUtils.rm_rf share/"locale"
+      FileUtils.rm_rf share/"man"
     end
   end
 end

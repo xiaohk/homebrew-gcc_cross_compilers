@@ -28,7 +28,7 @@ class I386JosElfGcc < Formula
                              "--without-headers"
       system 'make all-gcc'
       system 'make install-gcc'
-      FileUtils.ln_sf binutils.prefix/"i386-jos-elf", prefix/"i386-elf-jos"
+      FileUtils.ln_sf binutils.prefix/"i386-jos-elf", prefix/"i386-jos-elf"
       system 'make all-target-libgcc'
       system 'make install-target-libgcc'
       FileUtils.rm_rf share/"man"/"man7"
