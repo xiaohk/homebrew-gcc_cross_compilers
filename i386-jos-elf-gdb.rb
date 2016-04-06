@@ -1,9 +1,9 @@
 require 'formula'
 
 class I386JosElfGdb < Formula
-  homepage 'http://gcc.gnu.org'
-  url 'http://ftp.gnu.org/gnu/gdb/gdb-7.6.tar.bz2'
-  sha1 'b64095579a20e011beeaa5b264fe23a9606ee40f'
+  homepage 'http://www.gnu.org/software/gdb/'
+  url 'http://ftp.gnu.org/gnu/gdb/gdb-7.8.2.tar.xz'
+  sha1 '85a9cc2a4dfb748bc8eb74113af278524126a9bd'
 
   depends_on 'i386-jos-elf-binutils'
   depends_on 'i386-jos-elf-gcc'
