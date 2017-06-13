@@ -2,9 +2,10 @@ require 'formula'
 
 class X64ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
-  url 'http://ftpmirror.gnu.org/gcc/gcc-4.8.0/gcc-4.8.0.tar.bz2'
-  mirror 'http://ftp.gnu.org/gnu/gcc/gcc-4.8.0/gcc-4.8.0.tar.bz2'
-  sha1 'b4ee6e9bdebc65223f95067d0cc1a634b59dad72'
+  url 'http://ftpmirror.gnu.org/gcc/gcc-4.9.2/gcc-4.9.2.tar.bz2'
+  mirror 'http://ftp.gnu.org/gnu/gcc/gcc-4.9.2/gcc-4.9.2.tar.bz2'
+  sha256 '2020c98295856aa13fda0f2f3a4794490757fc24bcca918d52cc8b4917b972dd'
+  revision 1
 
   depends_on 'gmp'
   depends_on 'libmpc'
@@ -14,10 +15,10 @@ class X64ElfGcc < Formula
   def install
     binutils = Formula.factory 'x64-elf-binutils'
 
-    ENV['CC'] = '/usr/local/bin/gcc-4.2'
-    ENV['CXX'] = '/usr/local/bin/g++-4.2'
-    ENV['CPP'] = '/usr/local/bin/cpp-4.2'
-    ENV['LD'] = '/usr/local/bin/gcc-4.2'
+    ENV['CC'] = '/usr/local/bin/gcc-4.9'
+    ENV['CXX'] = '/usr/local/bin/g++-4.9'
+    ENV['CPP'] = '/usr/local/bin/cpp-4.9'
+    ENV['LD'] = '/usr/local/bin/gcc-4.9'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
 
     mkdir 'build' do
