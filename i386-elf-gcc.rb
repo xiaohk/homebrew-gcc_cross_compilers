@@ -7,9 +7,9 @@ class I386ElfGcc < Formula
   sha256 '2020c98295856aa13fda0f2f3a4794490757fc24bcca918d52cc8b4917b972dd'
   revision 1
 
-  depends_on 'gmp'
-  depends_on 'libmpc'
-  depends_on 'mpfr'
+  depends_on 'gmp@4'
+  depends_on 'libmpc@0.8'
+  depends_on 'mpfr@2'
   depends_on 'i386-elf-binutils'
 
   def install
